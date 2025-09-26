@@ -5,62 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EPIC Lab ITAM — Simplificado</title>
 
-  <!-- Bootstrap 5.3 (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Estilos mínimos en-línea -->
   <style>
     .yt-layout { min-height: 100vh; }
     .yt-sidebar { border-right: 1px solid #e9ecef; background: #fff; }
     .yt-item { padding: .55rem 0; }
-
     .thumb { width: 100%; height: auto; border-radius: .5rem; display: block; }
     .section-gap { margin-bottom: 1.5rem; }
     .yt-logo { height: 28px; }
-
-    @media (min-width: 992px){
-      .yt-sidebar { min-height: calc(100vh - 56px); } /* 56px ≈ altura navbar */
-    }
+    @media (min-width: 992px){ .yt-sidebar { min-height: calc(100vh - 56px); } }
   </style>
 </head>
 <body>
-
-  <!-- BARRA SUPERIOR (logo solo aquí) -->
   <nav class="navbar bg-white border-bottom sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center gap-2"
-         href="https://www.youtube.com" target="_blank" rel="noopener">
-        <img src="img/YTLogo.jpg" alt="YouTube" class="yt-logo">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="https://www.youtube.com" target="_blank" rel="noopener">
+        <img src="../img/YTLogo.jpg" alt="YouTube" class="yt-logo">
       </a>
-
-      <!-- Buscador: siempre redirige a YouTube -->
-      <form class="d-flex mx-auto w-100" style="max-width:680px;"
-            onsubmit="window.location.href='https://www.youtube.com'; return false;">
-        <input class="form-control rounded-start-pill" type="search"
-               placeholder="Buscar" aria-label="Buscar">
-        <button class="btn btn-outline-secondary rounded-end-pill px-3" type="submit">
-          Buscar
-        </button>
+      <form class="d-flex mx-auto w-100" style="max-width:680px;" onsubmit="window.location.href='https://www.youtube.com'; return false;">
+        <input class="form-control rounded-start-pill" type="search" placeholder="Buscar" aria-label="Buscar">
+        <button class="btn btn-outline-secondary rounded-end-pill px-3" type="submit">Buscar</button>
       </form>
-
-      <!-- Acciones simples -->
       <div class="d-none d-lg-flex align-items-center gap-2">
         <button class="btn btn-light">+ Crear</button>
-        <button class="btn btn-light position-relative">
-          Notif
+        <button class="btn btn-light position-relative">Notif
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+</span>
         </button>
-        <div class="rounded-circle bg-info text-white fw-bold d-flex align-items-center justify-content-center"
-             style="width:32px;height:32px;">A</div>
+        <div class="rounded-circle bg-info text-white fw-bold d-flex align-items-center justify-content-center" style="width:32px;height:32px;">A</div>
       </div>
     </div>
   </nav>
 
-  <!-- LAYOUT PRINCIPAL -->
   <div class="container-fluid yt-layout">
     <div class="row g-0">
-
-      <!-- SIDEBAR (estática, texto plano) -->
       <aside class="yt-sidebar col-12 col-lg-2 p-3">
         <div class="yt-item">Inicio</div>
         <div class="yt-item">Shorts</div>
@@ -73,29 +50,22 @@
         <div class="yt-item">Videos que me gustaron</div>
       </aside>
 
-      <!-- CONTENIDO -->
       <main class="col-12 col-lg-10 p-3 p-lg-4">
-
-        <!-- CABECERA DEL CANAL -->
         <section id="canal" class="section-gap">
           <div class="row g-3 align-items-center">
             <div class="col-auto">
-              <img src="img/epicLab.jpg" alt="EPIC Lab ITAM"
-                   class="img-fluid" style="max-width:120px;height:auto;">
+              <img src="../img/epicLab.jpg" alt="EPIC Lab ITAM" class="img-fluid" style="max-width:120px;height:auto;">
             </div>
             <div class="col">
               <h1 class="mb-1">EPIC Lab ITAM</h1>
               <h2 class="h6 text-muted mb-2">@EpicLabITAM · 325 suscriptores · 108 videos</h2>
               <p class="mb-1">Más información sobre este canal ...más</p>
-              <p class="mb-2">
-                <a href="https://www.epiclab.itam.mx/" target="_blank" rel="noopener">epiclab.itam.mx</a>
-              </p>
+              <p class="mb-2"><a href="https://www.epiclab.itam.mx/" target="_blank" rel="noopener">epiclab.itam.mx</a></p>
               <a href="#" class="btn btn-dark btn-sm">Suscribirme</a>
             </div>
           </div>
         </section>
 
-        <!-- NAV INTERNO (visual) -->
         <nav class="border-bottom mb-3">
           <ul class="nav nav-underline">
             <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
@@ -106,13 +76,11 @@
           </ul>
         </nav>
 
-        <!-- INICIO -->
         <section id="inicio" class="section-gap">
           <div class="row g-4 align-items-start">
             <div class="col-12 col-md-5 col-lg-4">
               <a href="https://youtu.be/WMkGm9Idldc" target="_blank" rel="noopener" class="d-block">
-                <img src="img/VideoInicio.jpg" alt="EPIC Lab Bootcamp 2023"
-                     class="thumb shadow-sm">
+                <img src="../img/VideoInicio.jpg" alt="EPIC Lab Bootcamp 2023" class="thumb shadow-sm">
               </a>
             </div>
             <div class="col-12 col-md-7 col-lg-8">
@@ -126,15 +94,12 @@
           </div>
         </section>
 
-        <!-- SHORTS -->
         <section id="shorts" class="section-gap">
           <h4 class="h6 mb-3">Shorts</h4>
           <div class="row g-3">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-              <a href="https://www.youtube.com/shorts/3CwrDRKOHng?feature=share"
-                 target="_blank" rel="noopener" class="d-block">
-                <img src="img/Short1.jpg" alt="La IA es una caja negra"
-                     class="thumb shadow-sm">
+              <a href="https://www.youtube.com/shorts/3CwrDRKOHng?feature=share" target="_blank" rel="noopener" class="d-block">
+                <img src="../img/Short1.jpg" alt="La IA es una caja negra" class="thumb shadow-sm">
               </a>
               <div class="mt-2">
                 <div class="fw-semibold small">La IA es una caja negra #inteligenciaartificial</div>
@@ -144,13 +109,12 @@
           </div>
         </section>
 
-        <!-- EN DIRECTO (solo TÍTULO + GIF) -->
         <section id="directo" class="mb-5">
           <h4 class="h6 mb-3">En directo</h4>
           <div class="row g-4 align-items-start">
             <div class="col-12 col-md-6 col-lg-5">
               <a href="https://www.youtube.com" target="_blank" rel="noopener" class="d-block">
-                <img src="img/Directo1.gif" alt="Transmisiones en vivo" class="thumb shadow-sm">
+                <img src="../img/Directo1.gif" alt="Transmisiones en vivo" class="thumb shadow-sm">
               </a>
             </div>
             <div class="col-12 col-md-6 col-lg-7 d-flex align-items-start">
@@ -163,7 +127,6 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
